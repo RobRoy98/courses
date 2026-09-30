@@ -66,3 +66,9 @@ Optimize for:
 2. low unnecessary token/context usage
 3. low model cost
 4. fast execution
+
+## Jev Skills
+
+Installed from https://github.com/wuyoscar/jev-skill (five-entry source preview, commit `b7593a624a1b452769b554e0a688786089bd4bd7`) into `.claude/skills/` (`jev`, `jev-act`, `jev-documents`, `jev-eval`, `jev-triage`).
+
+Selected mode: **B — agent simulation**. Do not call the Jev API or install the `jev-decide` CLI; do not send data to OpenRouter or TypeSafe. Mark results `mode: agent_simulation`, `jev_called: false`, `probability: null`, `confidence: null`. Switching to real Jev (mode A) requires explicit user approval.
