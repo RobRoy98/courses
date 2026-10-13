@@ -1,0 +1,20 @@
+name: notch-island
+
+on:
+  push:
+    paths: ["notch-island/**", ".github/workflows/notch-island.yml"]
+  pull_request:
+    paths: ["notch-island/**", ".github/workflows/notch-island.yml"]
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swift version
+        run: swift --version
+      - name: Build app bundle
+        working-directory: notch-island
+        env:
+          CI: "1"
+        run: ./build.sh
